@@ -36,7 +36,7 @@ const TextArea = forwardRef(({
         onScrollBeginDrag={onScrollBeginDrag}
         onScrollEndDrag={onScrollEndDrag}
       >
-        <View pointerEvents={isScrolling || isInitial ? 'box-only' : 'auto'}>
+        <View pointerEvents={isScrolling || isInitial ? 'box-only' : 'auto'} style={styles.style}>
           <TextInput
             ref={ref}
             autoFocus={isInitial}
@@ -59,6 +59,7 @@ const TextArea = forwardRef(({
 
 const styles = StyleSheet.create({
   contentContainerStyle: {
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center'
   },
