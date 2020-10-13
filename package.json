@@ -1,7 +1,7 @@
 {
-  "name": "react-native-scrollable-text-area",
+  "name": "react-native-focusable-textarea",
   "version": "1.0.8",
-  "description": "React Native Text Area",
+  "description": "React Native Focusable Text Area",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "react-native": "src/index",

@@ -3,7 +3,6 @@ import React, { forwardRef, useRef, useState } from 'react'
 import { StyleSheet, TextInput, View } from 'react-native'
 
 const TextArea = forwardRef(({
-  disabled = false,
   value,
   containerStyle,
   style,
@@ -22,7 +21,7 @@ const TextArea = forwardRef(({
   : onFocus
 
   return (
-    <View pointerEvents={isInitial || disabled ? 'box-only' : 'auto'} style={[styles.style, containerStyle]}>
+    <View pointerEvents={isInitial ? 'box-only' : 'auto'} style={[styles.style, containerStyle]}>
       <TextInput
         ref={inputRef}
         autoFocus={isInitial}
@@ -48,7 +47,6 @@ const styles = StyleSheet.create({
 })
 
 TextArea.propTypes = {
-  disabled: PropTypes.bool,
   value: PropTypes.string,
   containerStyle: PropTypes.oneOfType([
     PropTypes.array,

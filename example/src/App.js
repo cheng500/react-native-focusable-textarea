@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { TouchableOpacity, Text } from 'react-native'
-import TextArea from 'react-native-scrollable-text-area'
+import TextArea from 'react-native-focusable-textarea'
 
 const text = "Test\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\n"
 

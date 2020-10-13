@@ -1,17 +1,17 @@
-# react-native-text-area
+# react-native-focusable-textarea
 
-React Native Text Area
+React Native mutliline TextInput initial focus polyline fix
 
 ## Installation
 
 ```sh
-npm install --save react-native-text-area
+npm install --save react-native-focusable-textarea
 ```
 
 ## Usage
 
 ```js
-import TextArea from "react-native-text-area"
+import TextArea from "react-native-focusable-textarea"
 
 /*
 Props: {
