@@ -8,6 +8,7 @@ const TextArea = forwardRef(({
   style,
   onBlur,
   onFocus,
+  onMomentumScrollEnd,
   ...props
 }, ref) => {
   const inputRef = ref ? ref : useRef(null)
@@ -28,7 +29,8 @@ const TextArea = forwardRef(({
       contentContainerStyle={styles.contentContainerStyle}
       style={[styles.style, containerStyle]}
       onScrollBeginDrag={onScrollBeginDrag}
-      onScrollEndDrag={onScrollEndDrag}
+      onScrollEndDrag={onScrollEndDrag}      
+      onMomentumScrollEnd={onMomentumScrollEnd}
       keyboardShouldPersistTaps='handled'
     >
       <ScrollView
@@ -37,6 +39,7 @@ const TextArea = forwardRef(({
         style={[styles.style, containerStyle]}
         onScrollBeginDrag={onScrollBeginDrag}
         onScrollEndDrag={onScrollEndDrag}
+        onMomentumScrollEnd={onMomentumScrollEnd}
         keyboardShouldPersistTaps='handled'
       >
         <View pointerEvents={isScrolling || isInitial ? 'box-only' : 'auto'} style={styles.style}>
