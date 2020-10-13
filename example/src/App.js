@@ -6,11 +6,7 @@ const text = "Test\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\nTest\n
 
 const App = function App() {
   const inputRef = useRef(null)
-  return (
-    <>
-      <TextArea ref={inputRef} value={text} containerStyle={{ height: 500 }}/>
-    </>
-  )
+  return <TextArea ref={inputRef} value={text} containerStyle={{ height: 500 }}/>
 }
 
 export default App
