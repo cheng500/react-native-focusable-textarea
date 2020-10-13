@@ -59,16 +59,17 @@ const TextArea = forwardRef(({
 
 const styles = StyleSheet.create({
   contentContainerStyle: {
-    flex: 1,
     alignItems: 'center',
     justifyContent: 'center'
   },
   style: {
     flex: 1,
+    width: '100%'
   },
 })
 
 TextArea.propTypes = {
+  hidden: PropTypes.bool,
   value: PropTypes.string,
   containerStyle: PropTypes.oneOfType([
     PropTypes.array,
