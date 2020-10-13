@@ -29,6 +29,7 @@ const TextArea = forwardRef(({
       style={[styles.style, containerStyle]}
       onScrollBeginDrag={onScrollBeginDrag}
       onScrollEndDrag={onScrollEndDrag}
+      keyboardShouldPersistTaps='handled'
     >
       <ScrollView
         horizontal={true}
@@ -36,6 +37,7 @@ const TextArea = forwardRef(({
         style={[styles.style, containerStyle]}
         onScrollBeginDrag={onScrollBeginDrag}
         onScrollEndDrag={onScrollEndDrag}
+        keyboardShouldPersistTaps='handled'
       >
         <View pointerEvents={isScrolling || isInitial ? 'box-only' : 'auto'} style={styles.style}>
           <TextInput

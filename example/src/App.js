@@ -8,13 +8,7 @@ const App = function App() {
   const inputRef = useRef(null)
   return (
     <>
-      <TextArea ref={inputRef} value={text}/>
-      <TouchableOpacity
-        style={{ flex: 1, borderWidth: 1 }}
-        onPress={() => inputRef && inputRef.current && inputRef.current.blur()}
-      >
-        <Text>Others</Text>
-      </TouchableOpacity>
+      <TextArea ref={inputRef} value={text} containerStyle={{ height: 500 }}/>
     </>
   )
 }
