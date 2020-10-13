@@ -59,13 +59,11 @@ const TextArea = forwardRef(({
 
 const styles = StyleSheet.create({
   contentContainerStyle: {
-    alignItems: 'center',
-    justifyContent: 'center'
+    minWidth: '100%'
   },
   style: {
     flex: 1,
-    width: '100%'
-  },
+  }
 })
 
 TextArea.propTypes = {
