@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { forwardRef, useState } from 'react'
+import React, { forwardRef, useRef, useState } from 'react'
 import { StyleSheet, ScrollView, TextInput, TouchableWithoutFeedback, View } from 'react-native'
 
 const TextArea = forwardRef(({
@@ -10,6 +10,7 @@ const TextArea = forwardRef(({
   onFocus,
   ...props
 }, ref) => {
+  const inputRef = ref ? ref : useRef(null)
   const [isInitial, setIsInitial] = useState(true)
   const [isScrolling, setIsScrolling] = useState(false)
 
@@ -17,7 +18,7 @@ const TextArea = forwardRef(({
   ? () => setIsInitial(false)
   : onBlur
   const onFocusCallback = isInitial
-  ? () => ref && ref.current && ref.current.blur()
+  ? () => inputRef && inputRef.current && inputRef.current.blur()
   : onFocus
   const onScrollBeginDrag = () => setIsScrolling(true)
   const onScrollEndDrag = () => setIsScrolling(false)
@@ -38,7 +39,7 @@ const TextArea = forwardRef(({
       >
         <View pointerEvents={isScrolling || isInitial ? 'box-only' : 'auto'} style={styles.style}>
           <TextInput
-            ref={ref}
+            ref={inputRef}
             autoFocus={isInitial}
             caretHidden={isInitial}
             multiline={true}
