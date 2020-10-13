@@ -22,7 +22,7 @@ const TextArea = forwardRef(({
   : onFocus
 
   return (
-    <View pointerEvents={isInitial || disabled ? 'box-only' : 'auto'} style={styles.style}>
+    <View pointerEvents={isInitial || disabled ? 'box-only' : 'auto'} style={[styles.style, containerStyle]}>
       <TextInput
         ref={inputRef}
         autoFocus={isInitial}
@@ -50,6 +50,10 @@ const styles = StyleSheet.create({
 TextArea.propTypes = {
   disabled: PropTypes.bool,
   value: PropTypes.string,
+  containerStyle: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object
+  ]),
   style: PropTypes.oneOfType([
     PropTypes.array,
     PropTypes.object
