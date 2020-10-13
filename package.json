@@ -1,6 +1,6 @@
 {
   "name": "react-native-focusable-textarea",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "React Native Focusable Text Area",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
